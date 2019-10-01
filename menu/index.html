@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+	<title>SOLICITAÇÕES RECURSOS FÍSICOS - Pedido de Intervenção</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel='stylesheet' href='css/style.css'>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	<script>
+
+	</script>
+</head>
+
+<style>
+.notification-message-unread {
+	width: 1004px;
+	font-family: arial;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding: 10px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 40px;
+	animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+	50% {
+		background-color: white;
+	}
+}
+.desc {
+	float: right;
+	font-family: arial;
+	width: 787px;
+}
+img.planta {
+	float: right;
+	width: 560px;
+}
+img.ie{
+	display: block;
+	padding-left: 51px;
+	padding-right: 51px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(222,0,0);
+	animation: blinker 1s linear infinite;
+}
+.desc2 {
+	width: 1004px;
+	font-family: arial;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding: 10px;
+	margin-top: 10px;
+	font-family: arial;
+}
+.especialidades {
+	width: 1004px;
+	font-family: arial;
+	background-color: rgb(220,220,220);
+	color: black;
+	padding: 05px;
+	margin-top: 10px;
+	font-family: arial;
+}
+.desc3 {
+	width: 1004px;
+	font-family: arial;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding: 10px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 40px;
+}
+input.longo {
+	width: 780px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	-text-transform: capitalize;
+}
+input.especialidade {
+	width: 780px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	-text-transform: capitalize;
+}
+input.médio {
+	width: 255px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	-text-transform: capitalize;
+}
+input.médio2 {
+	width: 70px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	-text-transform: capitalize;
+}
+input.cp4 {
+	width: 30px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	margin-right: 10px;
+	-text-transform: capitalize;
+}
+input.cp3 {
+	width: 25px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	margin-right: 40px;
+	-text-transform: capitalize;
+}
+input.localidade {
+	width: 610px;
+	height: 15px;
+	padding: 10px;
+	float: right;
+	-text-transform: capitalize;
+}
+input.curto2 {
+	width: 45px;
+	height: 40px;
+	padding: 10px;
+	margin-right: 10px;
+	float: right
+}
+div.pagina {
+	max-width: 1024px;
+	margin: auto;
+}
+div.global {
+	width: 1024px;
+}
+form.individual {
+	width: 1024px;
+	padding-top: 10px;
+}
+form.radioBase {
+	width: 1024px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: .1em solid rgba(0, 0, 0, .75);
+}
+form.individual2 {
+	width: 1024px;
+	padding-top: 10px;
+}
+form.longo {
+	width: 1024px;
+	padding-top: 10px;
+}
+form.médio {
+	width: 500px;
+	padding-top: 10px;
+}
+
+form.médio2 {
+	width: 315px;
+	padding-top: 10px;
+}
+form.curto {
+	width: 410px;
+	padding-top: 10px;
+	float: right
+}
+div.matrícula {
+	-width: 200px;
+	-background-color: rgb(222,0,0);
+	-color: white;
+	padding-top: 5px;
+	margin-right: 10px;
+	margin-left: 0px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 20px;
+	float: right
+}
+div.individual3 {
+	width: 1024px;
+}
+div.individual {
+	width: 200px;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+div.checkboxfloat {
+	width: 210px;
+	-background-color: rgb(222,0,0);
+	-color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: arial;
+	-font-weight: bold;
+	float: right;
+	margin-right: 10px;
+}
+div.longo {
+	width: 1024px;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding-left: 10px;
+	-padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: arial;
+	font-weight: bold;
+}
+div.individualradio {
+	width: 310px;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding: 5px;
+	-padding-right: 80px;
+	-padding-bottom: 10px;
+	font-family: arial;
+	font-weight: bold;
+	float: right;
+	margin-right: 10px;
+	margin-left: 10px;
+	-margin-bottom: 10px;
+	text-align: center;
+}
+div.foot {
+	padding: 10px;
+	font-family: arial;
+	font-size: 8px;
+}
+input.radios {
+	-background: none repeat scroll 0 0 #94E325;
+	-border-radius: 50px;
+	-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+	-content: " ";
+	-font-size: 336px;
+	-height: 8px;
+	-left: 7px;
+	-position: absolute;
+	-top: 7px;
+	-width: 80px;
+}
+div.erro {
+	width: 200px;
+	background-color: #bbb;
+	color: white;
+	padding: 10px;
+	font-family: arial;
+	font-weight: bold;
+}
+div.submeter {
+	width: 200px;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding: 10px;
+	font-family: arial;
+	font-weight: bold;
+	cursor: pointer;
+}
+.resultados {
+	width: 1000px;
+	height: 100px;
+	background-color: blue;
+	color: white;
+	padding: 10px;
+	font-family: arial;
+	font-weight: bold;
+}
+select {
+	width: 794px;
+	padding: 10px;
+	float: right
+}
+div.individualfloat {
+	width: 200px;
+	background-color: rgb(222,0,0);
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-family: arial;
+	font-weight: bold;
+	float: right;
+	margin-right: 10px;
+}
+form.especialidade {
+	width: 1024px;
+	padding-top: 10px;
+}
+a:link, a:visited {
+	width: 225px;
+	height: 40px;
+	vertical-align: middle;
+	background-color: rgb(100,100,100);
+	color: white;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-family: arial;
+	font-weight: bold;
+	float: right;
+	margin-right: 10px;
+
+	-width: 170px;
+	-background-color: rgb(100, 100, 100);
+	-color: black;
+	-padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	-font-family: arial;
+	-font-weight: bold;
+	-font-size: 10px;
+}
+a:hover, a:active {
+	background-color: rgb(222,0,0);
+	color: white;
+}
+</style>
+
+<body>
+	<body onload="mostrar()" onfocus="infoSubmeter()">
+		<div class="pagina">
+			<br>
+			<img src="SRFbanner.jpg" alt="">
+
+
+
+			<div class="global">
+		<br>
+						<form class="especialidade" action="index.html" method="post">
+							<a href="https://ctt-pt.github.io/fornecedor/index.html">CRIAÇÃO DE <br> FORNECEDOR</a>
+							<a href="https://ctt-pt.github.io/gef-sinistros/index.html">PARTICIPAÇÃO <br> DE SINISTROS</a>
+							<a href="https://ctt-pt.github.io/ectt/index.html">PEDIDOS PARA <br> EDIFÍCIO CTT</a>
+							<a href="https://ctt-pt.github.io/srf/index.html">PEDIDOS DE <br> INTERVENÇÃO</a>
+					</form>
+
+
+			</div>
+			<br>
+			<div class="individual3" align="center">
+				<br>
+
+				<br>
+
+				<br>
+
+
+
+				<div class="foot" align="right">
+					MENU SOLICITAÇÕES RECURSOS FÍSICOS v1.0
+				</div>
+				<br><br>
+
+			</div>
+
+		</div>
+	</body>
+	</html>
